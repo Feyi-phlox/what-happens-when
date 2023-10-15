@@ -397,6 +397,22 @@ TLS handshake
 * From now on the TLS session transmits the application (HTTP) data encrypted
   with the agreed symmetric key.
 
+TLS Handshake Resumption
+------------------------
+* In addition to the initial TLS handshake process,
+  there is also a feature known as ``TLS Handshake Resumption``
+  This feature is designed to optimize the performance of secure connections,
+  especially for applications that involve multiple connections between
+  the same client and server.
+  When a client and server have previously established a TLS session
+  and wish to communicate again they can use the handshake resumption process.
+* Instead of performing the full handshake,
+  which involves the exchange of certificates and key negotiation,
+  the client and server can use a previously established session ID or session ticket.
+  This allows them to quickly resume the secure session
+  without the need for a complete handshake,
+  significantly reducing the overhead and improving connection speed.
+
 If a packet is dropped
 ----------------------
 
